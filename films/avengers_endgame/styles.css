@@ -1,0 +1,163 @@
+/* Celkové nastavení pozadí stránky */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Cesta k pozadí */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Zabrání scrollování */
+}
+
+html {
+    overflow: hidden; /* Zabrání scrollování */
+}
+
+/* Styl tlačítka */
+#customButton {
+    top: 4.4204322200392925vh;
+    width: 13.427734375vw;
+    height: 6.385068762278978vh;
+    background-color: #CCCCCC;
+    border-radius: 100px; /* Zaoblené rohy */
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Logo na tlačítku */
+#buttonLogo {
+    position: absolute;
+    top: 0.390625vw; /* Souřadnice Y loga v rámci tlačítka */
+    left: 0.390625vw; /* Souřadnice X loga v rámci tlačítka */
+    width: 2.392578125vw;
+    max-width: 49px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    z-index: 3;
+}
+
+#prehrat {
+    padding-left: 20px;
+    font-size: 2.9469548133595285vh;
+    font-family: 'Hanalei Fill';
+}
+
+#customButton:hover {
+    transform: scale(1.1); /* Zvětší tlačítko o 10% */
+}
+
+/* Informace o filmu */
+#filmInfo {
+    font-size: 3.9292730844793713vh;
+    line-height: 0.4;
+}
+
+/* Kontejner pro informace o filmu */
+#filmInfoContainer {
+    position: absolute;
+    top: 24.557956777996072vh; /* Umístění informací o filmu 120px od vrchu */
+    left: 4.8828125vw; /* Pozice informací na levé straně */
+    z-index: 2; /* Zajištění, že informace budou nad overlayem */
+    color: #CCCCCC; /* Barva textu */
+    font-family: 'Hanalei Fill', cursive; /* Font pro text */
+    text-align: left;
+}
+
+/* Nadpis filmu */
+#filmTitle {
+    font-size: 6.8762278978389vh;
+}
+
+/* Kontejner pro nadpis filmu */
+#filmTitleContainer {
+    position: absolute;
+    top: 16.208251473477407vh; /* Umístění nadpisu 20px od vrchu */
+    left: 4.8828125vw; /* Pozice nadpisu na levé straně */
+    z-index: 2; /* Zajištění, že nadpis bude nad overlayem */
+    color: #CCCCCC; /* Barva textu */
+    font-family: 'Hanalei Fill', cursive; /* Font pro text */
+    text-align: left;
+}
+
+/* Filmový plakát */
+#filmPoster {
+    width: 49.115913555992144vh; /* Plakát zabere 100 % šířky kontejneru */
+    height: auto; /* Zachování poměru stran */
+    border-radius: 2vw; /* Zaoblené rohy */
+    max-width: 500px; /* Maximální šířka plakátu 500px */
+    aspect-ratio: 2 / 3;
+}
+
+/* Kontejner pro filmový plakát */
+#posterContainer {
+    position: absolute;
+    top: 50%;
+    width: 49.115913555992144vh;
+    left: 64.453125vw; /* Umístění na x = 1320px */
+    transform: translateY(-50%); /* Vertikální vycentrování plakátu */
+    z-index: 2; /* Zajištění, že obsah bude nad overlayem */
+    text-align: center;
+}
+
+/* Průhledný obdélník za obsahem */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Černá s 80% průhledností */
+    z-index: 1; /* Zajistí, že bude za obsahem */
+    overflow: hidden; /* Zabrání scrollování */
+}
+
+/* Kontejner pro trailer */
+#trailerContainer {
+    position: absolute; /* Pozice nad ostatními prvky */
+    width: 640px; /* Šířka traileru */
+    height: 360px; /* Výška traileru */
+    overflow: hidden; /* Zabrání přeplnění obsahu */
+    left: 290px; /* Umístění traileru na x = 290px */
+    top: 600px; /* Umístění traileru na y = 600px */
+    z-index: 2; /* Udržení traileru nad ostatními prvky */
+    border-radius: 2vw;
+}
+
+/* Iframe traileru */
+#trailerContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Přizpůsobí šířku kontejneru */
+    height: 100%; /* Přizpůsobí výšku kontejneru */
+    border: none;
+}
+
+/* Styl tlačítka Zpět */
+#backButton {
+    position: absolute;
+    top: 1.851851851851852vh; /* Umístění tlačítka 20px od vrchu */
+    right: 1.041666666666667vw; /* Umístění tlačítka 20px od levého okraje */
+    background-color: rgb(204, 204, 204, 0.8);
+    color: #000000;
+    padding: 0.520833333333333vw 1.041666666666667vw;
+    border: none;
+    border-radius: 0.260416666666667vw; /* Zaoblené rohy */
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 3; /* Zajištění, že tlačítko bude nad ostatními prvky */
+    font-family: 'Hanalei Fill', cursive; /* Font pro text */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+#backButton:hover {
+    transform: scale(1.1); /* Zvětší tlačítko o 10% */
+    background-color: rgb(170, 170, 170,0.8); /* Mírné ztmavnutí barvy při najetí myší */
+}
